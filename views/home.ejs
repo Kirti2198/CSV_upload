@@ -1,0 +1,34 @@
+
+
+ <html>
+  <title>
+    <%= locals.title %>
+  </title>
+   <h1> Home Page</h1>
+ </html>
+
+ 
+  <!-- if user matches then show the form -->
+     <form action="/searchs_files/update" enctype="multipart/form-data"method="POST">
+      <input type="text" name="name" placeholder="File Name"" required>
+      
+      <input type="file" name="csv_file" placeholder="Csv File">
+      <input type="submit" value="Update">
+     </form>
+     <% if(locals.message) { %>
+      <p><%=message%></p>
+      <% } %>
+  
+
+      <div class="auth-links">
+        <ul>
+
+            <li>
+                <input type="text" class="search">
+            </li>
+            <li>
+                <a href="/searchs_files/files_view">View Files</a>
+            </li>
+
+        </ul>
+    </div>
